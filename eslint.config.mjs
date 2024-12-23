@@ -12,6 +12,13 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
+    settings: {
+      react: {
+        version: 'detect', // 自动检测react版本
+      },
+    },
+  },
+  {
     rules: {
       'no-unused-vars': 'warn',
       'prettier/prettier': 'error', // 强制执行 Prettier 格式
@@ -24,7 +31,7 @@ export default [
     rules: {
       'prettier/prettier': [
         'error',
-        { singleQuote: true, semi: true, trailingComma: true, printWidth: 80 },
+        { singleQuote: true, semi: true, trailingComma: 'es5', printWidth: 80 },
       ],
     },
   },
